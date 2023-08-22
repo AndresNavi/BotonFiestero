@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ACTIVIDAD BOTÓN</title>
+  <link rel="stylesheet" href="botones.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Botón de Andra, Ruth y Andrés</h1>
+    <button class="reproductor" type="button" id="boton"><span class="cambiocolor">Play!</span></button>
+    <audio src="Noche.mp3"></audio>
+    <script>
+    let boton = document.querySelector(".reproductor")
+    let audioEtiqueta = document.querySelector("audio")
+    boton.addEventListener("click", () => {
+        audioEtiqueta.setAttribute("src", "Noche.mp3")
+        audioEtiqueta.play()
+        console.log(`Reproduciendo: ${audioEtiqueta.src}`)
+    }
+    )
+</script>
+  </div>
+</body>
+</html>
